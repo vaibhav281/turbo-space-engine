@@ -11,3 +11,32 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.imageContainer {
+  position: relative;
+  height:160px;
+  /* margin-bottom: 10px; */
+}
+
+.imageAnime {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 1s ease-in-out;
+  
+  
+}
+
+.hoverImage {
+  opacity: 0;
+  z-index: 1;
+
+  
+}
+
+.imageContainer:hover .hoverImage {
+  opacity: 1;
+}
+
+.imageContainer:hover .imageAnime:not(.hoverImage) {
+  opacity: 0;
+}
